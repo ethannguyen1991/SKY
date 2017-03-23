@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vannguyen.myapplication.MainActivity"
+    android:orientation="vertical"><![CDATA[
+android:orientation="vertical"
+android:gravity="fill_horizontal|center_horizontal"
+android:weightSum="1">
+
+    ]]>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/inputTF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Post-Fix String"
+            tools:layout_conversion_absoluteHeight="42dp"
+            tools:layout_conversion_absoluteWidth="328dp"
+            tools:layout_conversion_absoluteX="16dp"
+            tools:layout_conversion_absoluteY="16dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Output Here"
+            tools:layout_conversion_absoluteHeight="388dp"
+            tools:layout_conversion_absoluteWidth="328dp"
+            tools:layout_conversion_absoluteX="16dp"
+            tools:layout_conversion_absoluteY="58dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="shuntingYardButtonPressed"
+            android:text="Shunting Yard"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="132dp"
+            tools:layout_conversion_absoluteX="113dp"
+            tools:layout_conversion_absoluteY="447dp"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
