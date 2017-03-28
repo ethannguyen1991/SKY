@@ -6,24 +6,36 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.StringTokenizer;
 public class MainActivity extends AppCompatActivity {
 
-    private EditText inputTF;
-    private TextView outputText;
+    private EditText inputET;
+    private TextView outputTV;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.inputTF = (EditText)this.findViewById(R.id.inputTF);
-        this.outputText = (TextView)this.findViewById(R.id.outputText);
 
-        this.inputTF.setText("123+8*2/4");
+        this.inputET = (EditText)this.findViewById(R.id.inputET);
+        this.outputTV = (TextView)this.findViewById(R.id.outputTV);
     }
 
-    public void shuntingYardButtonPressed(View v)
+    public void processButtonPressed(View v)
     {
-        ShuntingYard sy = new ShuntingYard(this.inputTF.getText().toString());
+        StringTokenizer st = new StringTokenizer(this.inputET.getText().toString(), "+-*/", true);
+        Queue q = new Queue();
+        while(st.hasMoreTokens())
+        {
+            q.enqueue(st.nextToken());
+        }
 
+        String answer = "";
+        while(q.getCount() > 0)
+        {
+            answer = answer + q.dequeue().getPayload() + ",";
+        }
+        this.outputTV.setText(answer);
     }
 }

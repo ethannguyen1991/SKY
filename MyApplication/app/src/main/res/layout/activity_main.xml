@@ -5,60 +5,37 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     tools:context="com.example.vannguyen.myapplication.MainActivity"
-    android:orientation="vertical"><![CDATA[
-android:orientation="vertical"
-android:gravity="fill_horizontal|center_horizontal"
-android:weightSum="1">
-
-    ]]>
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="495dp"
         android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <EditText
-            android:id="@+id/inputTF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/inputET"
             android:gravity="center"
-            android:hint="Post-Fix String"
-            tools:layout_conversion_absoluteHeight="42dp"
-            tools:layout_conversion_absoluteWidth="328dp"
-            tools:layout_conversion_absoluteX="16dp"
-            tools:layout_conversion_absoluteY="16dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <TextView
-            android:id="@+id/outputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Output Here"
-            tools:layout_conversion_absoluteHeight="388dp"
-            tools:layout_conversion_absoluteWidth="328dp"
-            tools:layout_conversion_absoluteX="16dp"
-            tools:layout_conversion_absoluteY="58dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="58dp" />
+            android:hint="enter expression" />
 
         <Button
-            android:id="@+id/convertButton"
+            android:text="Parse Expression"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="shuntingYardButtonPressed"
-            android:text="Shunting Yard"
-            tools:layout_conversion_absoluteHeight="48dp"
-            tools:layout_conversion_absoluteWidth="132dp"
-            tools:layout_conversion_absoluteX="113dp"
-            tools:layout_conversion_absoluteY="447dp"
-            tools:layout_editor_absoluteX="113dp"
-            tools:layout_editor_absoluteY="447dp" />
+            android:id="@+id/button"
+            android:onClick="processButtonPressed" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/outputTV"
+            android:textSize="24sp" />
     </LinearLayout>
 
 
