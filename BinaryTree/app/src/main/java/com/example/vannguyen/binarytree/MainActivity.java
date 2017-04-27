@@ -46,6 +46,17 @@ public class MainActivity extends AppCompatActivity
     {
         System.out.println("Depth: " + this.bt.getDepth());
     }
+    public String stringifyThatTree(BinaryTree tree)
+    {
+        BinaryTree r = tree;
+        String concatonationIsFun = "";
+        while(r.getPayload() != -1)
+        {
+            concatonationIsFun = concatonationIsFun + r.getPayload();
+            r = r.getRightTree();
+        }
+        return "";
+    }
 
     public void balanceButtonPressed(View v)
     {
